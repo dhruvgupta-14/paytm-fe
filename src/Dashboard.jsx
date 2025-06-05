@@ -81,6 +81,7 @@ export const Dashboard = () => {
 
       if (response.data.success) {
         setBalance(response.data.balance);
+        toast.success("5000 amount is added to your wallet")
       }
     } catch (e) {
       console.log(e);
@@ -101,7 +102,7 @@ export const Dashboard = () => {
             />
           </div>
         </div>
-        <div className="w-1/6 mt-4">
+        <div className="w-60 mt-4 overflow-hidden h-12">
           <Button label="Generate More Money" onClick={generate} />
         </div>
         <Users />
