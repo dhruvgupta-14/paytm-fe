@@ -13,6 +13,7 @@ import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./ProtectedRoute";
 import { Dashboard } from "./Dashboard";
 import EditUser from "./EditUser";
+import Transaction from "./Transaction";
 
 const App = () => {
   return (
@@ -44,6 +45,14 @@ const App = () => {
           element={
             <ProtectedRoute>
               <EditUser/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/transaction"
+          element={
+            <ProtectedRoute>
+             <Transaction/>
             </ProtectedRoute>
           }
         />
